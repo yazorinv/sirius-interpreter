@@ -30,7 +30,27 @@ class Interpreter {
     void clear();
 
 
-    void run(const Json& json, std::istream& cin = std::cin, std::ostream& cout = std::cout);
+    void run(const Json& json);
+
+
+   private:
+    Expr for_constant(const Json& json);
+    Expr for_variable(const Json& json);
+    Expr for_binary_operator(const Json& json);
+
+    Expr for_skip(const Json& json);
+
+    Expr for_read(const Json& json);
+    Expr for_write(const Json& json);
+
+    Expr for_sequence(const Json& json);
+
+    Expr for_if_else(const Json& json);
+
+    Expr for_init_function(const Json& json);
+    Expr for_call_function(const Json& json);
+
+    Expr for_let(const Json& json);
 };
 
 
