@@ -1,8 +1,15 @@
 #include <iostream>
+using namespace std;
 
-#include "expr.h"
 #include "interpreter.h"
+using namespace sirius;
 
 int main() {
-    std::cout << "Hello";
+    Interpreter::global_init();
+    Interpreter interpreter;
+    Json json;
+
+    cin >> json;
+
+    interpreter.run(json);
 }

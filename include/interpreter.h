@@ -9,16 +9,19 @@ namespace sirius {
 
 
 class Interpreter {
+   public:
+    static void global_init();
+
    private:
-    std::map<std::string, std::function<Expr(Interpreter&, const Json&)>> funcs;
     std::map<std::string, Expr> mem;
     std::vector<Expr> stack;
 
 
     Expr dfs(const Json& json);
 
+
    public:
-    Interpreter();
+    Interpreter() = default;
     Interpreter(const Interpreter&) = default;
     Interpreter(Interpreter&&) noexcept = default;
     ~Interpreter() noexcept = default;
@@ -27,7 +30,7 @@ class Interpreter {
     Interpreter& operator=(Interpreter&&) noexcept = default;
 
 
-    void clear();
+    void clear(bool all = false);
 
 
     void run(const Json& json);
@@ -51,6 +54,9 @@ class Interpreter {
     Expr for_call_function(const Json& json);
 
     Expr for_let(const Json& json);
+
+
+    Expr wrap_for_function(const Parametrs& args, const Json& json);
 };
 
 

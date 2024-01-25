@@ -4,6 +4,7 @@ project(sirius_interpreter)
 
 set(SHARED_SRC
         src/expr.cpp
+        src/interpreter.cpp
 )
 
 
