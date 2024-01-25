@@ -48,21 +48,21 @@ class Expr {
     Expr operator()(const Parametrs& params) const;
 
 
-    Expr operator+(const Expr& other) const&;
-    Expr operator-(const Expr& other) const&;
-    Expr operator*(const Expr& other) const&;
-    Expr operator/(const Expr& other) const&;
-    Expr operator%(const Expr& other) const&;
+    Expr operator+(const Expr& other) const;
+    Expr operator-(const Expr& other) const;
+    Expr operator*(const Expr& other) const;
+    Expr operator/(const Expr& other) const;
+    Expr operator%(const Expr& other) const;
 
-    Expr operator&(const Expr& other) const&;
-    Expr operator|(const Expr& other) const&;
+    Expr operator&(const Expr& other) const;
+    Expr operator|(const Expr& other) const;
 
-    Expr operator==(const Expr& other) const&;
-    Expr operator!=(const Expr& other) const&;
-    Expr operator<(const Expr& other) const&;
-    Expr operator<=(const Expr& other) const&;
-    Expr operator>(const Expr& other) const&;
-    Expr operator>=(const Expr& other) const&;
+    Expr operator==(const Expr& other) const;
+    Expr operator!=(const Expr& other) const;
+    Expr operator<(const Expr& other) const;
+    Expr operator<=(const Expr& other) const;
+    Expr operator>(const Expr& other) const;
+    Expr operator>=(const Expr& other) const;
 };
 
 }  // namespace sirius

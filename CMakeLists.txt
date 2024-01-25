@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 project(sirius_interpreter)
 
 
-file(GLOB SHARED_SRC src/*.cpp)
+set(SHARED_SRC
+        src/expr.cpp
+)
 
 
 add_executable(sirius_interpreter main.cpp ${SHARED_SRC})
