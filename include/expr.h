@@ -1,4 +1,8 @@
 #pragma once
+#include <string>
+#include <variant>
+#include <vector>
+
 #include "incl.h"
 
 
