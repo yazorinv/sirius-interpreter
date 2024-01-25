@@ -16,3 +16,6 @@ else ()
     target_compile_options(sirius_interpreter PRIVATE -Wall -Wextra -Werror -O3 -mavx2)
 endif ()
 
+
+find_package(nlohmann_json CONFIG REQUIRED)
+target_link_libraries(sirius_interpreter PRIVATE nlohmann_json::nlohmann_json)
