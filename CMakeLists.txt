@@ -16,7 +16,7 @@ if (CMAKE_BUILD_TYPE STREQUAL Debug)
     target_compile_options(sirius_interpreter PRIVATE -Wall -Wextra -Werror -O1 -fno-omit-frame-pointer -fno-limit-debug-info -fsanitize=address,undefined)
     target_link_options(sirius_interpreter PRIVATE -fsanitize=address,undefined)
 else ()
-    target_compile_options(sirius_interpreter PRIVATE -Wall -Wextra -Werror -O3 -mavx2)
+    target_compile_options(sirius_interpreter PRIVATE -Wall -Wextra -Werror -Ofast -mavx2 -march=native)
 endif ()
 
 
