@@ -17,5 +17,5 @@ int main() {
     auto start = high_resolution_clock::now();
     interpreter.run(json);
     auto end = high_resolution_clock::now();
-    cout << (end - start) / 1.0ms << '\n';
+    cerr << (end - start) / 1.0ms << '\n';
 }
